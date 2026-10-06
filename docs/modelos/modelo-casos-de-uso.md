@@ -4,7 +4,7 @@
 | --- | --- | --- |
 | 1.3 | 05/10/2026 | Plantilla |
 
-**Iteración de referencia:** [Indica la última iteración incorporada al modelo.]
+**Iteración de referencia:** E1
 
 Este documento recoge el modelo de casos de uso del proyecto. Se completa a medida que se incorporan funciones. Los diagramas muestran distintas vistas del mismo modelo.
 
@@ -28,7 +28,11 @@ Registra los roles externos que participan en las funciones representadas. Un ac
 
 | Nombre del actor | Rol que representa |
 | --- | --- |
-| [Nombre] | [Describe el rol externo.] |
+| Usuario | Persona que interactúa con el proyecto simbiosis |
+|Usuario Registrado|Persona que dispone de una cuenta en la plataforma|
+|Nutricionista|Persona con conocimientos nutricionales que los usa de forma beneficiosa en la plataforma|
+|Cuidador|Persona que interactúa con la plataforma y se encarga de gestionar las enfermedades de otros pacientes|
+|Paciente|Persona que sufre de enfermedades intestinales|
 
 Mantén los mismos nombres en las tablas, los diagramas y las descripciones.
 
@@ -40,7 +44,13 @@ Registra los casos que aparecen en el modelo. Asigna a cada caso un identificado
 
 | Identificador | Nombre | Objetivo | Participantes |
 | --- | --- | --- | --- |
-| [UC-…] | [Nombre] | [Explica el objetivo.] | [Indica los actores que participan.] |
+| UC-05 | Gestionar Perfil | Gestionar los datos personales y referencias de la cuenta propia |Actor principal: Usuario registrado. No se identifica actor de apoyo en este caso |
+|UC-01|Registrarse|Crear una cuenta de usuario general para la plataforma|Actor principal: Usuario. No se identifica actor de apoyo en este caso |
+|UC-02|Registrarse como nutricionista|Pedir permisos de nutricionista en la plataforma la plataforma|Actor principal: Nutricionista. No se identifica actor de apoyo en este caso |
+|UC-03|Registrarse como cuidador|Pedir permisos de cuidador en la plataforma|Actor principal: Cuidador. No se identifica actor de apoyo en este caso |
+|UC-04|Verificar Documentación nutricionista|Verificar que la documentación aportada por el usuario sea verídica para poder actuar como nutricionista|Sistema|
+|UC-06|Verificar relación de cuidado|Permitir autorizar si quiere una relación de cuidado a un paciente|Actor principal: Paciente. No se identifica actor de apoyo en este caso|
+|UC-07|Indicar pacientes|||
 
 [Indica los actores que participan. Si procede, distingue el actor principal, que busca alcanzar el objetivo del caso de uso y normalmente inicia la interacción, de los actores de apoyo, que proporcionan servicios o información al sistema.]
 
@@ -60,14 +70,14 @@ Para cada vista, incluye un título, una frase sobre su alcance y el diagrama. T
 
 **Alcance:** [Explica qué funciones representa esta vista.]
 
-[Inserta aquí el diagrama.]
+![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-acceso-cuentas-ayuda.png)
 
 Si una decisión necesita aclaración, puedes añadir una nota breve junto al diagrama.
 
 **Nombre y ubicación de la imagen.** Guarda las imágenes en `docs/modelos/imagenes/`. Usa este patrón:
 
 ```text
-tipo-de-diagrama-ambito.png
+
 ```
 
 El tipo indica qué diagrama contiene la imagen. El ámbito indica qué funciones o elementos representa. Usa minúsculas, sin tildes, eñes ni espacios, y separa las palabras con guiones.
@@ -98,7 +108,13 @@ En E1 basta con un respaldo breve del diagrama. La tabla permite ampliar la traz
 
 | Elemento del modelo | UR y FR de referencia | NFR pertinentes | Relación con los requisitos |
 | --- | --- | --- | --- |
-| [Caso, actor o relación] | [Identificadores] | [Identificadores, si procede] | [Explica qué respaldan o condicionan.] |
+| UC-05 Gestionar Perfil | UR-03;FR-019 | NFR-010 G | FR-019 permite modificar datos personales y referencias, pero excluye alias y correo; FR-020 permite a los usuarios eliminar su perfil mediate un proceso de verificación con su contraseña actual |
+|UC-01 Registrarse|UR-01||Permite crear una cuenta en la plataforma|
+|UC-02 Registrarse como nutricionista|UR-01|||
+|UC-03 Registrarse como cuidador|UR-01|||
+|UC-04 Verificar Documentación Nutricionista|UR-01|||
+|UC-06 Verificar relación de cuidado|UR-01|||
+|UC-07 Indicar pacientes|UR-01|||
 
 Consulta el [catálogo canónico](../requisitos/catalogo-requisitos.md) y la [SRS](../requisitos/srs.md). Si falta una condición, indica que está pendiente de aclaración. No la presentes como un requisito confirmado.
 
