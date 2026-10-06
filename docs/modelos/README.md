@@ -6,6 +6,6 @@ Modelos y diagramas propios del Proyecto Simbiosis (por ejemplo, modelos de domi
 
 | Documento | Finalidad |
 | --- | --- |
-| | |
+|![Casos de uso de acceso cuentas y ayuda](imagenes/casos-de-uso-acceso-cuentas-ayuda.png) |Modelo acumulado de Proyecto simbiosis;primera vista incorporada en E1 |
 
 Cada modelo nuevo debe añadirse a esta carpeta en Markdown (o como diagrama embebido en Markdown) y listarse en la tabla anterior.
