@@ -102,16 +102,6 @@ UC-35 es una subfunción compartida. No representa una operación que el Coordin
 
 ## 4 Diagramas del modelo
 
-### 4.2 Vista de recetas y datos de salud
-
-**Frontera del sistema:** Proyecto Simbiosis.
-
-**Alcance:** Publicasción y realización de recetas.Acceso y validación de datos de salud
-
-![Vista de recetas y datos de salud E2](imagenes/casos-de-uso-salud-recetas-e2.png)
-
-**Relaciones entre casos de uso.**
-
 
 ### 4.1 Vista de acceso, cuentas y ayuda de E1
 
@@ -132,6 +122,17 @@ La vista no utiliza relaciones de extensión ni generalizaciones entre casos de 
 El inicio de sesión no se incluye en todos los casos protegidos. La comprobación de la contraseña actual al eliminar la cuenta tampoco implica un nuevo inicio de sesión.
 
 La imagen se conserva en el repositorio con el nombre usado para esta referencia. Las revisiones de esta vista actualizarán el mismo archivo. Las nuevas vistas tendrán archivos distintos, de acuerdo con la [guía de modelos](README.md).
+
+
+### 4.2 Vista de recetas y datos de salud
+
+**Frontera del sistema:** Proyecto Simbiosis.
+
+**Alcance:** Publicasción y realización de recetas.Acceso y validación de datos de salud
+
+![Vista de recetas y datos de salud E2](imagenes/casos-de-uso-salud-recetas-e2.png)
+
+**Relaciones entre casos de uso.**
 
 ## 5 Respaldo en los requisitos
 
