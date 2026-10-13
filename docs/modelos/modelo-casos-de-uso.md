@@ -151,14 +151,14 @@ Los identificadores remiten al [catálogo canónico de requisitos](../requisitos
 | UC-10 Recorrer bienvenida | UR-12; FR-207 | NFR-010 | Recorrido del primer acceso, que se puede omitir y es independiente de la ayuda contextual. |
 | UC-11 y sus inclusiones | UR-01 y UR-02; FR-003 y FR-016 | — | Envío compartido de los mensajes de verificación y restablecimiento. El servicio externo participa en el envío. |
 |UC-12 Registrar análisis de laboratorio|UR-05;FR-42|-||
-|UC-13 Permitir acceder al nutricionista a sus datos fisiológicos||||
-|UC-14 Registrar estado de salud||||
-|UC-15 Exportar datos fisiológicos||||
-|UC-16 Mostrar historial del paciente||||
-|UC-17 Mostrar diagrama de datos fisiológicos||||
-|UC-18 Acceder a los datos fisiológicos del paciente||||
-|UC-19 Permitir que datos fisiológicos puede el cuidador compartir||||
-|UC-20|Crear recetas|||
+|UC-13 Permitir acceder al nutricionista a sus datos fisiológicos|UR-05;FR-45,FR-46|||
+|UC-14 Registrar estado de salud|UR-05;FR-53|||
+|UC-15 Exportar datos fisiológicos|UR-05;FR-47,FR-48|||
+|UC-16 Mostrar historial del paciente|UR-05;FR-49|||
+|UC-17 Mostrar diagrama de datos fisiológicos|UR-05;FR-50|||
+|UC-18 Acceder a los datos fisiológicos del paciente|UR-05;FR-45|||
+|UC-19 Permitir que datos fisiológicos puede el cuidador compartir|UR-05;FR-201|||
+|UC-20|Crear recetas|UR-06;FR-54||
 | UC-31 Aprobar cuenta de cuidador o nutricionista | UR-13; FR-181; condición profesional de UR-01 en FR-191 | NFR-010 | El Coordinador aprueba cuentas de cuidador y nutricionista. La aprobación de la documentación profesional condiciona las funciones de publicación del nutricionista. |
 | UC-32 Suspender cuenta de usuario activa | UR-13; FR-182 | NFR-010 | El Coordinador puede suspender cuentas de usuario activas. Los efectos concretos de la suspensión siguen pendientes de aclaración. |
 | UC-33 Eliminar cuenta de usuario | UR-13; FR-183 y FR-211 | NFR-010 | El Coordinador puede eliminar cuentas. El contenido publicado por un cuidador se conserva tras eliminar su cuenta. |
