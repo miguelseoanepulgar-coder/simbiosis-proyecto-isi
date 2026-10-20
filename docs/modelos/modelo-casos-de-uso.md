@@ -223,45 +223,103 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-05 — Actualizar perfil
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:**  	Modificar los datos personales y las preferencias de la cuenta propia.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Principal: Usuario registrado.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** El usuario está registrado y tiene su cuenta abierta al realizar la operación.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** 
+-El usuario registrado accede a su perfil y le da a la opción de actualizar.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Escenario principal de éxito:**
+-El usuario registrado accede a su perfil y le da a la opción de actualizar.
+-El usuario registrado puede acceder a los datos guardados antes de modificarlos
+-El usuario registrado reescribe el nombre completo.
+-El usuario registrado reescribe el teléfono conservando las reglas de formato del registro, incluidos los prefijos internacionales.
+-El usuario registrado puede reescribir el código postal.
+-El usuario registrado puede reescribir las preferencias.
+-El usuario registrado solicita el guardado de los datos modificados.
+-El sistema comprueba que los datos sean válidos.
+-El sistema guarda conjuntamente los cambios y confirma que el perfil se ha actualizado.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+**Extensiones (flujos alternativos):** 
+2a.
+-El usuario registrado no escribe el nombre o el teléfono.
+-El usuario registrado solicita el guardado de los datos modificados.
+-El sistema comprueba que los datos sean válidos.
+-El sistema identifica el campo erroneo y explica qué debe corregirse. 
+-El sistema Conserva los valores introducidos y no guarda ningún cambio.
+-El usuario registrado puede corregir los cambios.
+-volver a punto 2
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+7a.
+-El usuario registrado sale sin guardar.
+-El sistema descarta los cambios de esa edición.
+-El sistema conserva los datos anteriores.
+
+**Postcondiciones:** 
+-Cuando los datos son válidos, el sistema guarda conjuntamente los cambios y confirma que el perfil se ha actualizado.
+-Si la persona cancela antes de guardar, se descartan los cambios de esa edición. El perfil conserva los valores anteriores.
+-Si el sistema no puede guardar, informa del problema y no confirma la actualización. Conserva los valores introducidos para que la persona pueda reintentar el guardado. Los datos guardados permanecen sin cambios.
+
+**Reglas y NFR pertinentes:** Modelo #3 fila UC-05       Acta  UC-05 #1,Acta  UC-05 #2,Acta  UC-05 #3,Catalogo FR-019 , NFR-010
 
 **Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-21 — Buscar recetas
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Buscar recetas mediante los criterios seleccionados, consultar los resultados y acceder al detalle de una receta.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Principal: Usuario registrado.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** El usuario está registrado y tiene su cuenta abierta al realizar la operación.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario registrado solicita buscar recetas.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+-El usuario registrado solicita buscar recetas.
+-El sistema permite al usuario acceder al buscador de recetas.
+-El usuario registrado introduce los ingredientes incluidos en el sistema que quiere o no quiere que aparezcan en la receta y/o introduce una palabra o frase.
+-El sistema comprueba si hay criterios, y si no se invalidan entre ellos.
+-El sistema muestra por pantalla una lista compuesta por recetas publicadas y validadas en al aplicación, que se adecúen a todos los requisitos mostrados anteriormente por el usuario. Cada vista previa de la receta muestra título, imagen, calificación promedio y descripción breve. Si falta la imagen, se indica «Sin imagen». Si no hay valoraciones, se indica «Sin valoraciones»; no se muestra un promedio de cero.
+-El usuario registrado consulta el detalle de una receta.
+-El sistema muestra título, imagen si existe, ingredientes, instrucciones de preparación, tiempo de cocción, número de porciones, alias de quien la publicó e insignia de validación de la receta seleccionada.
+-El usuario registrado puede volver a acceder a los resultados anteriores.
+-El usuario registrado puede volver a realizar la búsqueda(volver paso 2).
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** 
+3a)
+-El usuario registrado introduce los mismos ingredientes en "incluir" y "quitar" de la receta.
+-El sistema avisa al usuario y no ejecuta la búsqueda.
+-volver paso 2.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+3b)
+-El usuario registrado no introduce ningún criterio de búsqueda.
+-El sistema solicita un criterio y no ejecuta la búsqueda.
+-volver paso 2.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+5a)
+-El sistema indica al usuario que no hay recetas con sus criterios de búsqueda y conserva esos criterios.
+-El sistema muestra correcciones ortográficas o sugerencias para otros criterios de búsqueda si hay.
+-El usuario clicka en una sugerencia sugerida.
+-volver paso 3.
+
+5b)
+-El sistema informa de que no se ha podido completar la búsqueda y del problema específico y conserva los criterios de búsqueda.
+-El usuario registrado puede realizar otra búsqueda(paso 2) o salir.
+
+**Postcondiciones:** 
+-El sistema muestra título, imagen si existe, ingredientes, instrucciones de preparación, tiempo de cocción, número de porciones, alias de quien la publicó e insignia de validación de la receta seleccionada.
+-Si ninguna receta cumple los criterios, el sistema indica que no hay resultados para esa búsqueda. Conserva los criterios para que la persona pueda modificarlos.
+-Si el sistema no puede completar la búsqueda o cargar el detalle, informa del problema. No presenta el fallo como una búsqueda sin resultados.
+
+**Reglas y NFR pertinentes:**  Acta  UC-021 #1,Acta  UC-01 #2,Acta  UC-021 #3 Cátalogo FR-085 
 
 **Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
 
